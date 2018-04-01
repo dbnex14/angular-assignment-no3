@@ -1,0 +1,12 @@
+<h4>I am in 'container' component</h4>
+<hr/>
+<button
+  class="btn-primary"
+  (click)="onDisplaySecret($event)">Show Secret</button>
+  <!-- (click)="showSecret = !showSecret">Show Secret</button> -->
+
+<p *ngIf="showSecret">Secret password = tuna</p>
+<p
+  *ngFor="let mylog of mylogs; let idx = index"
+  [ngStyle]="{backgroundColor: idx >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text' : idx >= 4}">{{ mylog }}</p>
